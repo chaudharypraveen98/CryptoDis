@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CryptoDis</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas|Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="surprise1">
+        <div class="sur1-head">CryptoDis</div>
+        <div class="question">1. BTC</div>
+        <div class="question-start" id="btc"></div>
+        <div class="question">2. BTC</div>
+        <div class="question-start" id="btc"></div>
+        <div class="question">3. BTC</div>
+        <div class="question-start" id="btc"></div>
+        <div class="question">4. BTC</div>
+        <div class="question-start" id="btc"></div>
+        <div class="question">5. BTC</div>
+        <div class="question-start" id="btc"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $( document ).ready(
+            function rate(){
+                fetch('https://api.coginbase.com/v2/prices/INR/spot')
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((data) => {
+                        let i;
+                        console.log(data.data.length);
+                        for(i = 0; i < data.data.length; i++) {
+                            console.log("hint");
+                            var obj = data[i];
+                            console.log(obj.amount);
+                        };
+                        //document.getElementById("btc").innerHTML = data["data"]["amount"];
+                    });
+                var t = setTimeout(rate, 5000);
+            }
+        );
+
+    </script>
+</body>
+</html>
