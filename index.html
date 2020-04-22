@@ -10,39 +10,47 @@
 <body>
     <div class="surprise1">
         <div class="sur1-head">CryptoDis</div>
-        <div class="question">1. BTC</div>
+        <div class="sur1-sub">A webapp which shows dynamic pricing of popular cryptocurrency</div>
+        <div class="question">1. Bitcoin</div>
         <div class="question-start" id="btc"></div>
-        <div class="question">2. BTC</div>
-        <div class="question-start" id="btc"></div>
-        <div class="question">3. BTC</div>
-        <div class="question-start" id="btc"></div>
-        <div class="question">4. BTC</div>
-        <div class="question-start" id="btc"></div>
-        <div class="question">5. BTC</div>
-        <div class="question-start" id="btc"></div>
+
+        <div class="question">2. Etherium</div>
+        <div class="question-start" id="eth"></div>
+
+        <div class="question">3. Litecoin</div>
+        <div class="question-start" id="ltc"></div>
+
+        <div class="question">4. XRP</div>
+        <div class="question-start" id="xrp"></div>
+
+        <div class="question">5. EOS</div>
+        <div class="question-start" id="eos"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
         $( document ).ready(
             function rate(){
-                fetch('https://api.coginbase.com/v2/prices/INR/spot')
+                fetch('https://api.coinbase.com/v2/prices/INR/spot')
                     .then((response) => {
                         return response.json();
                     })
                     .then((data) => {
-                        let i;
+
                         console.log(data.data.length);
+                        //This is for looping through all the currencies present in the api.
+                        /* let i;
                         for(i = 0; i < data.data.length; i++) {
-                            console.log("hint");
-                            var obj = data[i];
-                            console.log(obj.amount);
-                        };
-                        //document.getElementById("btc").innerHTML = data["data"]["amount"];
+                            let obj = data.data[i];
+                        } */
+                        document.getElementById("btc").innerHTML = data.data[0].amount;
+                        document.getElementById("eth").innerHTML = data.data[3].amount;
+                        document.getElementById("ltc").innerHTML = data.data[5].amount;
+                        document.getElementById("xrp").innerHTML = data.data[14].amount;
+                        document.getElementById("eos").innerHTML = data.data[17].amount;
+                        var t = setTimeout(rate, 5000);
                     });
-                var t = setTimeout(rate, 5000);
-            }
-        );
+            })
 
     </script>
 </body>
