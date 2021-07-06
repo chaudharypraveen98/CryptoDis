@@ -1,28 +1,68 @@
 .sur1-head{
     font-size: 48px;
-    font-weight: 500;
+    text-align: center;
+    color: white;
 }
 .sur1-sub{
     font-size: 36px;
-    font-weight: 500;
+    text-align: center;
+    color: rgb(11, 13, 179);
+}
+.crypto-url{
+    color: white;
+    background-color: black;
+    padding: 10px 8px;
+    border-radius: 25px;
+}
+.crypto-url:hover{
+    color: rgb(233, 105, 179);;
 }
 .surprise1{
-    text-align: center;
-    margin-bottom: 100px;
-    background-image: url("sur.webp");
-    padding-bottom: 50px;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 91% 26%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 27% 63%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 59% 48%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 58% 65%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 55% 21%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 88% 4%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 9% 23%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 40% 78%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 78% 5%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 11% 87%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 11% 24%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 18% 75%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 71% 80%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 34% 79%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 9% 51%, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 46% 69%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 54% 90%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 55% 58%, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 95% 37%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 9% 4%, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.02) 5%,transparent 5%, transparent 100%),linear-gradient(135deg, rgb(249, 93, 202),rgb(11, 13, 179));
 }
-.question{
+    .question{
     color: darkblue;
     font-family: Calibri;
     font-weight: 500;
     font-size: 36px;
     margin-top: 30px;
 }
-.question-start{
-    margin-top: 20px;
-    color: red;
-    font-weight: 500;
-    font-size: 36px;
-    padding: 0px 100px;
+.crypto-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.crypto-container > div{
+    height: 300px;
+    width: 200px;
+    position: relative;
+    margin: 50px 25px;
+    padding: 30px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: rgba(255,255,255,0.6);
+    box-shadow: 4px 5px 10px 0px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 4px 5px 10px 0px rgba(255,255,255,0.75);
+    -moz-box-shadow: 4px 5px 10px 0px rgba(255,255,255,0.75);
+}
+.serial-no{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top:20px;
+    font-size: 64px !important;
+    color: rgba(0,0,0,0.3);
+}
+.crypto .title{
+    padding-top: 50px;
+    color: rgb(11, 13, 179);
+}
+
+.crypto .rate {
+    margin-bottom: 40px !important;
+}
+.primary{
+    color: rgb(233, 105, 179)!important;
 }
